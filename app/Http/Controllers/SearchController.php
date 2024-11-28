@@ -14,6 +14,6 @@ class SearchController extends Controller
             ->where('title', 'LIKE', '%'.request('q').'%')
             ->get();
 
-        return view('results', ['jobs' => $jobs]);
+        return view('result', ['jobs' => $jobs]);
     }
 }
